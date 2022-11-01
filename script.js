@@ -350,9 +350,10 @@ verUser(users);
 
 //PUNTO 9
 let i=0;
+let num;
 const numeros = [];
 while(i<5){
-  let num = Number(prompt("Ingrese un número"));
+  num = Number(prompt("Ingrese un número"));
   numeros.push(num);
   i++;
 }
@@ -364,6 +365,26 @@ const descendente = (numeros) => {
 }
 ascendente(numeros);
 descendente(numeros);
+
+//PUNTO 9 - correct
+/*function menAMay(array) {
+  array.sort(function(a, b){return a - b});
+  console.log(array);
+}
+function mayAMen(array) {
+  array.sort(function(a, b){return b - a}); 
+  console.log(array);
+}
+
+let arrayNumbers = [];
+for (let i=0; i <= 5; i++) {
+  let numbers = parseInt(prompt("Ingrese un numero:"));
+  arrayNumbers.push(numbers);
+}
+console.log(arrayNumbers);
+menAMay(arrayNumbers);
+mayAMen(arrayNumbers);*/
+
 
 //PUNTO 10
 /*
@@ -379,16 +400,17 @@ ONMOUSEOVER: The user moves the mouse over an HTML element
 ONSUBMIT: Enviar formulario
 ONSCROLL: El evento es generado cuando el usuario realiza desplazamiento (scrolls) sobre el contenido de un elemento
 */
-
 //PUNTO 11
 let cadena = prompt("Ingrese una cadena de texto");
 const minuscula = (cadena) =>{
-  console.log(cadena.toLowerCase());
+  console.log(`Cadena ingresada en minúsculas: ${cadena.toLowerCase()}`);
 }
 minuscula(cadena);
 
 //PUNTO 12
 const edad = Number(prompt("Ingrese su edad"));
+
+//Agregar validacion de edad y que no sean numeros negativos
 const ingreso = edad =>{
   if(edad>=18){
     console.log("Ud. es mayor de edad puede ingresar");
