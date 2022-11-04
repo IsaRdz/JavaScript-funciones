@@ -235,6 +235,16 @@ const users = [
     console.log(users[i].name);
 }*/
 
+//Funcion Map para mostrar los nombres de los usuarios
+// La funcion map es una función de orden superior
+//names sera un nuevo array con los nombres de los usuarios
+
+const names = users.map(user =>{
+  return user.name;
+});
+
+console.log("Names", names);
+
 function paintDom(users){
     let body = ``;
 
@@ -246,9 +256,37 @@ function paintDom(users){
         <div class="card">
             <h1>${users[i].name}</h1>
         </div>
+        <h1 class="title">${users[i].username}</h1>
         `;
     }
     //INNERHTML
     tagToUpdate.innerHTML = body;
 }
 paintDom(users);
+
+/*const usersWithMap = usersIniciatec.map(userIniciatec =>{
+  return {
+    username: userIniciatec
+  };
+}) */
+
+const date = "1994-03-10";
+const dateToParse = Date.parse(date);
+console.log("Date",date);
+console.log("dateToParse", dateToParse); 
+//Toma la fecha que le pasamos y devuelve la cant de segundos desde 01/01/1970 a las 00 horas
+//el date parse se llama formato timestamp
+
+
+//Ejemplo para task
+const dateToCompare = "01/01/2022";
+console.log("dateToCompare", dateToCompare);
+
+const dateSplit = dateToCompare.split("/");
+console.log("dateSplit",dateSplit);
+
+const dateToCompareParsed = new Date(dateSplit[2], dateSplit[1]-1, dateSplit[0]);
+console.log("dateToCompareParsed", dateToCompareParsed);
+
+const dateToTimestamp = dateToCompareParsed.getTime();
+console.log("dateToTimestamp", dateToTimestamp);

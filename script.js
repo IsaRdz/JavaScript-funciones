@@ -418,3 +418,13 @@ const ingreso = edad =>{
   console.log("Ud. es menor de edad no puede ingresar");
 }
 ingreso(edad);
+
+const arrayUsers = ["Fabi", "Leo", "Isa", "Lean", "Cata"];
+const arrayUsers2 = ["Emi", "Ema", "Andy", "Euge", "Emilio"];
+const arrayUsers3 = ["Vale", "Franco", "Nico", "Facu", "Luci"];
+
+const usersIniciatec = [
+  ...arrayUsers,
+  ...arrayUsers2,
+  ...arrayUsers3
+]
